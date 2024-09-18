@@ -1,0 +1,14 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
+  "compilerOptions": {
+    "sourceMap": true, // Enable source maps    
+    "types": ["chrome"],
+    "lib": ["dom", "esnext"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+  }
+}

@@ -1,0 +1,28 @@
+  {
+    "manifest_version": 3,
+    "name": "Job Keyword Finder",
+    "version": "1.0",
+    "description": "Lists jobs that matches your skills.",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "contextMenus",
+      "activeTab",
+      "storage",
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.reed.co.uk/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "host_permissions": [
+      "*://*.reed.co.uk/*"
+    ],
+    "web_accessible_resources": [{
+      "resources": ["dist/content.js", "dist/Sidebar.tsx"],
+      "matches": ["*://*.reed.co.uk/*"]
+    }]
+  }
